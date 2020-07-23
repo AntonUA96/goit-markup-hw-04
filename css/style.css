@@ -33,6 +33,16 @@ html {
 .header-contacts-list {
   display: flex;
 }
+.navigation-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-items:hover::after {
+  content: "";
+  height: 4px;
+  background-color: black;
+}
 header {
   border-bottom: 1px solid #ececec;
 }
@@ -142,7 +152,23 @@ p {
   color: var(--hover-color);
 }
 
-.mail,
+.header-contacts-list .item {
+  display: flex;
+}
+.header-contacts {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.header-contacts-svg {
+  fill: var(--title-text-color);
+  margin-right: 10px;
+}
+.header-contacts:hover .header-contacts-svg {
+  fill: var(--hover-color);
+}
+
+/* .mail,
 .phone {
   display: flex;
   align-items: center;
@@ -188,7 +214,7 @@ p {
   height: 15px;
   margin-right: 10px;
   background-repeat: no-repeat;
-}
+} */
 
 /* ГЛАВНЫЙ ЗАГОЛОВОК */
 
@@ -303,18 +329,52 @@ p {
   padding-top: 30px;
   padding-bottom: 24px;
   background-color: #fff;
+  border-radius: 0px 0px 4px 4px;
 }
 .social-items {
   display: flex;
   justify-content: center;
 }
-
+.social-items .items {
+  border-radius: 50%;
+  background-color: black;
+}
 .social-items .item:not(:last-child) {
-  margin-right: 34px;
+  margin-right: 10px;
+}
+
+.social-list-icon {
+  display: flex;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+}
+
+.social-list-icon .social-list-svg {
+  margin: auto;
 }
 
 .our-team-list .card {
   width: 270 px;
+  background-color: var(--white-color);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.social-list-svg {
+  fill: var(--our-team-background-color);
+}
+
+.social-list-icon:hover .social-list-svg {
+  fill: var(--white-color);
+}
+
+.social-list-icon:hover {
+  background-color: var(--hover-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 }
 
 /* НАШИ КЛИЕНТЫ */
@@ -371,7 +431,7 @@ p {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 /* ФУТЕР */
