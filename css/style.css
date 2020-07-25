@@ -402,6 +402,8 @@ p {
   border-radius: 4px;
   width: 170px;
   height: 90px;
+  justify-content: center;
+  align-items: center;
 }
 
 .partners {
@@ -422,10 +424,6 @@ p {
 .clients-item:hover .client-svg,
 .clients-item:focus .client-svg {
   fill: var(--hover-color);
-}
-
-.client-svg {
-  margin: auto;
 }
 
 /* ЗАГОЛОВКИ СТРАНИЦЫ */
